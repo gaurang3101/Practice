@@ -7,7 +7,6 @@ public class UniqueCharInName {
 
     public void charCounter(String name) {
         int l = name.length();
-        System.out.println(l);
         HashSet<Character> set = new HashSet<>();
         for (int i = 0; i < l-1 ; i++) {
             Character c = name.charAt(i);
@@ -15,6 +14,8 @@ public class UniqueCharInName {
         }
         System.out.println("The Unique Characters in your name are - ");
         System.out.println(set);
+        System.out.println("No. of unique characters in your name - ");
+        System.out.println(set.size());
     }
 
 }
@@ -23,7 +24,7 @@ public class UniqueCharInName {
 class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter your name - ");
+        System.out.print("Please enter your name - ");
         String s = sc.next();
         UniqueCharInName ucin = new UniqueCharInName();
         ucin.charCounter(s);
